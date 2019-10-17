@@ -8,6 +8,7 @@ import java.util.List;
  * @author Angela Villota
  * Coffee V1
  * January 2019
+ * October 2019, including the changes in the HLVL syntax
  */
 public interface IHlvlBasicFactory {
 	
@@ -20,18 +21,18 @@ public interface IHlvlBasicFactory {
 	public String getElement(String identifier);
 	
 	/**
-	 * Produces a core relation 
+	 * Produces a commons relation 
 	 * @param element, is a String for the identifiers of the element  
-	 * @return a String with the hlvl sentences in the form coreElements(E1)
+	 * @return a String with the hlvl sentences in the form common(E1)
 	 */
-	public String getCore(String element);
+	public String getCommon(String element);
 	/**
 	 * Produces a core relation for the elements that must be included in the
 	 * product. 
 	 * @param identifiers, is a list of the identifiers of the elements that  
-	 * @return a String with the hlvl sentences in the form coreElements(E1, E2, E3)
+	 * @return a String with the hlvl sentences in the form common(E1, E2, E3)
 	 */
-	public String getCoreList(List<String> identifiers);
+	public String getCommonList(List<String> identifiers);
 
 	/**
 	 * Produces an implies declaration of the form left => right
@@ -54,7 +55,7 @@ public interface IHlvlBasicFactory {
 	 * @param parent id of the parent 
 	 * @param child is an identifier
 	 * @param type can be Mandatory or Optional, the decomposition types supported by HLVL(basic)
-	 * @return an hlvl sentence in the form decomposition(parent, [c1])< card> 
+	 * @return an hlvl sentence in the form decomposition(parent, [c1], [m,n]) 
 	 */
 	public String getDecomposition(String parent, String child, DecompositionType type);
 	
@@ -63,7 +64,7 @@ public interface IHlvlBasicFactory {
 	 * @param parent id of the parent 
 	 * @param children list of the cildren's identifiers
 	 * @param type can be Mandatory or Optional, the decomposition types supported by HLVL(basic)
-	 * @return an hlvl sentence in the form decomposition(parent, [c1, c2, ..cn])< card> 
+	 * @return an hlvl sentence in the form decomposition(parent, [c1, c2, ..cn], [m,n]) 
 	 */
 	public String getDecompositionList(String parent, List <String> children, DecompositionType type);
 	
@@ -72,7 +73,7 @@ public interface IHlvlBasicFactory {
 	 * @param parent id of the parent 
 	 * @param children list of the cildren's identifiers
 	 * @param type can be Alternative and Or, the group types supported by HLVL(basic)
-	 * @return an hlvl sentence in the form group(parent, [c1, c2, ..cn])[min, max]
+	 * @return an hlvl sentence in the form group(parent, [c1, c2, ..cn], [m,n])
 	 */
 	public String getGroup(String parent, List <String> children, GroupType type);
 	

@@ -21,8 +21,14 @@ import com.coffee.modelParsers.utils.ParsingParameters;
  * @version 0.5, 19/01/2019
  * @author Joan David Colina Echeverry
  * contracts modified on September 15th by Juan Diego Carvajal Castaño
+ * bugs fixed by avillota on octobre 16th 2019
  */
 public class VariamosXMLToHlvlParser implements IHlvlParser {
+	
+	/**
+	 * tabulation 
+	 */
+	private static final String TAB ="\t"; 
 
 	/**
 	 * List that contains the dependencies between the elements from a xml file
@@ -58,7 +64,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	 * @param converter: relationship with the HlvlBasicFactory class that fulfills
 	 *        the function of creating the HLVL code
 	 */
-	private IHlvlBasicFactory converter;
+	private IHlvlBasicFactory rules;
 
 	/**
 	 * This method is responsible for creating a VariamosXMLToHlvlParser object and
@@ -97,7 +103,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	 */
 	public void loadArrayLists() {
 		xmlReader = new XmlReader();
-		converter = new HlvlBasicFactory();
+		rules = new HlvlBasicFactory();
 		xmlReader.loadXmlFile(params.getInputPath());
 		importantXmlDependecy = xmlReader.getImportantXmlDependecy();
 		xmlElements = xmlReader.getXmlElements();
@@ -111,7 +117,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	 */
 	public void loadArrayLists(String xml) {
 		xmlReader = new XmlReader();
-		converter = new HlvlBasicFactory();
+		rules = new HlvlBasicFactory();
 		xmlReader.loadXmlString(xml);
 		importantXmlDependecy = xmlReader.getImportantXmlDependecy();
 		xmlElements = xmlReader.getXmlElements();
@@ -123,7 +129,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	 * relations in HLVL code from the importantXmlDependency attribute
 	 */
 	public void converterXmlDependecyToHLVLCode() {
-		HlvlCode.append(converter.getRelationsLab());
+		HlvlCode.append(rules.getRelationsLab());
 		converterGroupAndCore();
 		for (int i = 0; i < importantXmlDependecy.size(); i++) {
 
@@ -132,16 +138,16 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 			String caso = importantXmlDependecy.get(i).getRelType();
 			switch (caso) {
 			case "mandatory":
-				HlvlCode.append("	" + converter.getDecomposition(source, target, DecompositionType.Mandatory));
+				HlvlCode.append(TAB + rules.getDecomposition(source, target, DecompositionType.Mandatory));
 				break;
 			case "optional":
-				HlvlCode.append("	" + converter.getDecomposition(target, source, DecompositionType.Optional));
+				HlvlCode.append(TAB + rules.getDecomposition(target, source, DecompositionType.Optional));
 				break;
 			case "requires":
-				HlvlCode.append("	" + converter.getImplies(source, target));
+				HlvlCode.append(TAB + rules.getImplies(source, target));
 				break;
 			case "excludes":
-				HlvlCode.append("	" + converter.getMutex(target, source));
+				HlvlCode.append(TAB + rules.getMutex(target, source));
 				break;
 
 			}
@@ -168,7 +174,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 		for (Entry<String, Element> entry : xmlElements.entrySet()) {
 			String name = getValidName(entry.getValue().getName());
 			if (!name.equals("bundle")) {
-				HlvlCode.append("	" + converter.getElement(name));
+				HlvlCode.append(TAB + rules.getElement(name));
 			}
 		}
 
@@ -185,14 +191,14 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 			String caso = entry.getValue().getType();
 			switch (caso) {
 			case "root":
-				HlvlCode.append("	" + converter.getCore(name));
+				HlvlCode.append(TAB + rules.getCommon(name));
 				break;
 			case "bundle":
 				if (entry.getValue().getBundleType().endsWith("OR"))
-					HlvlCode.append("	" + converter.getGroup(findRootBundle(entry.getValue()),
+					HlvlCode.append(TAB + rules.getGroup(findRootBundle(entry.getValue()),
 							findGroupsElements(entry.getValue()), GroupType.Or));
 				else
-					HlvlCode.append("	" + converter.getGroup(findRootBundle(entry.getValue()),
+					HlvlCode.append(TAB + rules.getGroup(findRootBundle(entry.getValue()),
 							findGroupsElements(entry.getValue()), GroupType.Xor));
 				break;
 			}
@@ -258,7 +264,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	@Override
 	public void parse() throws Exception {
 		loadArrayLists();
-		HlvlCode.append(converter.getHeader(params.getTargetName()+"_generated"));
+		HlvlCode.append(rules.getHeader(params.getTargetName()+"_generated"));
 		converterXmlElementToHLVLCode();
 		converterXmlDependecyToHLVLCode();
 		writeFile();
@@ -267,7 +273,8 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	@Override
 	public String parse(String data) throws Exception {
 		loadArrayLists(data);
-		HlvlCode.append(converter.getHeader("Auto_generated"));
+		//FIXME consider to include a timestamp in the id of the model 
+		HlvlCode.append(rules.getHeader("Auto_generated"));
 		converterXmlElementToHLVLCode();
 		converterXmlDependecyToHLVLCode();
 		return  HlvlCode.toString();
