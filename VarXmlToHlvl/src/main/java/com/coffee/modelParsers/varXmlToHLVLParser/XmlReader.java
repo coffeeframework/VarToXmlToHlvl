@@ -260,10 +260,10 @@ public class XmlReader {
 	 */
 	public void readDocument(Node n) {
 
-		if ((n.getNodeName().equals("general") || n.getNodeName().equals("root"))
+		if ((n.getNodeName().equals("abstract") || n.getNodeName().equals("root"))
 				&& n.getAttributes().item(0) != null) {
 			addGeneralAndRootElement(n);
-		} else if (n.getNodeName().equals("leaf")) {
+		} else if (n.getNodeName().equals("concrete")) {
 			addLeafElement(n);
 		} else if (n.getNodeName().equals("bundle")) {
 			addBundleElement(n);
