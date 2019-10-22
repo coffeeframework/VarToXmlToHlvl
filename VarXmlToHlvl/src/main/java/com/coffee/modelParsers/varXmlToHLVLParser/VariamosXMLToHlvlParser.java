@@ -194,12 +194,12 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 				HlvlCode.append(TAB + rules.getCommon(name));
 				break;
 			case "bundle":
-				if (entry.getValue().getBundleType().endsWith("OR"))
-					HlvlCode.append(TAB + rules.getGroup(findRootBundle(entry.getValue()),
-							findGroupsElements(entry.getValue()), GroupType.Or));
-				else
+				if (entry.getValue().getBundleType().endsWith("XOR"))
 					HlvlCode.append(TAB + rules.getGroup(findRootBundle(entry.getValue()),
 							findGroupsElements(entry.getValue()), GroupType.Xor));
+				else
+					HlvlCode.append(TAB + rules.getGroup(findRootBundle(entry.getValue()),
+							findGroupsElements(entry.getValue()), GroupType.Or));
 				break;
 			}
 		}
