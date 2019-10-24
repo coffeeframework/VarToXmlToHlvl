@@ -1,0 +1,23 @@
+model  smallTest2_generated
+elements: 
+	boolean Mobile_Phone
+	boolean Colour
+	boolean Camera
+	boolean Calls
+	boolean High_Resolution
+	boolean MP3
+	boolean GPS
+	boolean Screen
+	boolean Media
+	boolean Basic
+relations:
+	r0: common(Mobile_Phone)
+	r1:group(Screen,[Basic, Colour, High_Resolution],[1,1])
+	r2:group(Media,[Camera, MP3],[1,*])
+	r3:decomposition(Calls,[Mobile_Phone],[1,1])
+	r4:decomposition(Mobile_Phone,[GPS],[0,1])
+	r5:decomposition(Screen,[Mobile_Phone],[1,1])
+	r6:decomposition(Mobile_Phone,[Media],[0,1])
+	r7: implies(Camera,High_Resolution)
+	r8: mutex(Basic, GPS)
+
