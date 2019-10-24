@@ -279,5 +279,55 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 		converterXmlDependecyToHLVLCode();
 		return  HlvlCode.toString();
 	}
+
+	public ArrayList<Dependency> getImportantXmlDependecy() {
+		return importantXmlDependecy;
+	}
+
+	public void setImportantXmlDependecy(ArrayList<Dependency> importantXmlDependecy) {
+		this.importantXmlDependecy = importantXmlDependecy;
+	}
+
+	public HashMap<String, Element> getXmlElements() {
+		return xmlElements;
+	}
+
+	public void setXmlElements(HashMap<String, Element> xmlElements) {
+		this.xmlElements = xmlElements;
+	}
+
+	public XmlReader getXmlReader() {
+		return xmlReader;
+	}
+
+	public void setXmlReader(XmlReader xmlReader) {
+		this.xmlReader = xmlReader;
+	}
+
+	public ParsingParameters getParams() {
+		return params;
+	}
+
+	public void setParams(ParsingParameters params) {
+		this.params = params;
+	}
+
+	public StringBuilder getHlvlCode() {
+		return HlvlCode;
+	}
+
+	public void setHlvlCode(StringBuilder hlvlCode) {
+		HlvlCode = hlvlCode;
+	}
+
+	public IHlvlBasicFactory getRules() {
+		return rules;
+	}
+
+	public void setRules(IHlvlBasicFactory rules) {
+		this.rules = rules;
+	}
+	
+	
 	
 }
