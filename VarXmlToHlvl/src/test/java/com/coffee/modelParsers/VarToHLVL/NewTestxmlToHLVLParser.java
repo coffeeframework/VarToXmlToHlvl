@@ -10,8 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import org.junit.Test;
-import com.coffee.modelParsers.utils.ParsingParameters;
 import com.coffee.modelParsers.varXmlToHLVLParser.VariamosXMLToHlvlParser;
+import com.github.coffeeframework.utils.ParsingParameters;
 
 public class NewTestxmlToHLVLParser {
 
