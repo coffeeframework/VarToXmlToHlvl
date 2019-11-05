@@ -1,17 +1,15 @@
 package com.coffee.modelParsers.varXmlToHLVLParser;
 import java.util.ArrayList;
-
-
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import com.coffee.modelParsers.basicHLVLPackage.DecompositionType;
-import com.coffee.modelParsers.basicHLVLPackage.GroupType;
-import com.coffee.modelParsers.basicHLVLPackage.HlvlBasicFactory;
-import com.coffee.modelParsers.basicHLVLPackage.IHlvlParser;
-import com.coffee.modelParsers.basicHLVLPackage.IHlvlBasicFactory;
 import com.coffee.modelParsers.utils.FileUtils;
 import com.coffee.modelParsers.utils.ParsingParameters;
+import com.github.coffeeframework.basickhlvlpackage.DecompositionType;
+import com.github.coffeeframework.basickhlvlpackage.GroupType;
+import com.github.coffeeframework.basickhlvlpackage.HlvlBasicFactory;
+import com.github.coffeeframework.basickhlvlpackage.IHlvlBasicFactory;
+import com.github.coffeeframework.basickhlvlpackage.IHlvlParser;
 
 /**
  * This is a class that is responsible for extracting 
