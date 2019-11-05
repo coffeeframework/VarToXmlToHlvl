@@ -135,5 +135,11 @@
 			<artifactId>basichlvlpackage</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.coffeeframework</groupId>
+			<artifactId>utils</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

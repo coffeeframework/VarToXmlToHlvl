@@ -3,13 +3,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import com.coffee.modelParsers.utils.FileUtils;
-import com.coffee.modelParsers.utils.ParsingParameters;
 import com.github.coffeeframework.basickhlvlpackage.DecompositionType;
 import com.github.coffeeframework.basickhlvlpackage.GroupType;
 import com.github.coffeeframework.basickhlvlpackage.HlvlBasicFactory;
 import com.github.coffeeframework.basickhlvlpackage.IHlvlBasicFactory;
 import com.github.coffeeframework.basickhlvlpackage.IHlvlParser;
+import com.github.coffeeframework.utils.*;
 
 /**
  * This is a class that is responsible for extracting 
