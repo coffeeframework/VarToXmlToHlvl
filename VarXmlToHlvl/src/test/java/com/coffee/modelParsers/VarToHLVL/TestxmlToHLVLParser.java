@@ -1,14 +1,12 @@
 package com.coffee.modelParsers.VarToHLVL;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.coffee.modelParsers.varXmlToHLVLParser.VariamosXMLToHlvlParser;
@@ -193,10 +191,10 @@ public class TestxmlToHLVLParser {
 		try {
 			String variamosResult = variamosXMLToHlvlParser.parse(xml);
 			
-			assertTrue(result.equals(variamosResult));
+			Assert.assertTrue(result.equals(variamosResult));
 		} catch (Exception e) {
 			e.printStackTrace();
-			fail();
+			Assert.fail();
 		}
 	}
 
@@ -305,10 +303,10 @@ public class TestxmlToHLVLParser {
 		try {
 			String variamosResult = variamosXMLToHlvlParser.parse(xml);
 		
-			assertTrue(result.equals(variamosResult));
+			Assert.assertTrue(result.equals(variamosResult));
 		} catch (Exception e) {
 			e.printStackTrace();
-			fail();
+			Assert.fail();
 		}
 	}
 
@@ -769,10 +767,10 @@ public class TestxmlToHLVLParser {
 
 		try {
 			String variamosResult = variamosXMLToHlvlParser.parse(xml);
-			assertTrue(result.equals(variamosResult));
+			Assert.assertTrue(result.equals(variamosResult));
 		} catch (Exception e) {
 			e.printStackTrace();
-			fail();
+			Assert.fail();
 		}
 	}
 
@@ -811,11 +809,11 @@ public class TestxmlToHLVLParser {
 				datosHLVL += linea + "\n";
 				linea = in.readLine();
 			}
-			assertTrue(datosHLVL.equals(resultado));
+			Assert.assertTrue(datosHLVL.equals(resultado));
 			in.close();
 			f.close();
 		} catch (IOException e) {
-			fail();
+			Assert.fail();
 		}
 
 	}
@@ -864,11 +862,11 @@ public class TestxmlToHLVLParser {
 				linea = in.readLine();
 			}
 		
-			assertEquals(datosHLVL, resultado);
+			Assert.assertEquals(datosHLVL, resultado);
 			in.close();
 			f.close();
 		} catch (IOException e) {
-			fail();
+			Assert.fail();
 		}
 	}
 	
@@ -1023,7 +1021,7 @@ public class TestxmlToHLVLParser {
 				"\tr5: implies(cuartoPrincipal,garaje)\n" + 
 				"\tr6: mutex(AnteMinusJardin, cuartoInvitador)\n";
 		
-		assertEquals(output, resultado);
+		Assert.assertEquals(output, resultado);
 		//System.out.println(output);
 	}
 	
@@ -1351,7 +1349,7 @@ public class TestxmlToHLVLParser {
 							"	R7: implies(mstprim, unweighted)\n" + 
 							"	R8: mutex(stronglyc, shortest)";
 		
-		assertEquals(output, resultado);
+		Assert.assertEquals(output, resultado);
 		//System.out.println(output);
 	}
 
@@ -1460,11 +1458,11 @@ public class TestxmlToHLVLParser {
 				datosHLVL += linea + "\n";
 				linea = in.readLine();
 			}
-			assertTrue(datosHLVL.equals(resultado));
+			Assert.assertTrue(datosHLVL.equals(resultado));
 			in.close();
 			f.close();
 		} catch (IOException e) {
-			fail();
+			Assert.fail();
 		}
 
 	}

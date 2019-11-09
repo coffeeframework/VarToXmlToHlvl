@@ -1,0 +1,4 @@
+com\coffee\modelParsers\varXmlToHLVLParser\VariamosXMLToHlvlParser.class
+com\coffee\modelParsers\varXmlToHLVLParser\XmlReader.class
+com\coffee\modelParsers\varXmlToHLVLParser\Element.class
+com\coffee\modelParsers\varXmlToHLVLParser\Dependency.class

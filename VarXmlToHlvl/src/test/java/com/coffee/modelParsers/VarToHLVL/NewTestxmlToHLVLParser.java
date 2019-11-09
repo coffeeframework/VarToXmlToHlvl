@@ -1,14 +1,6 @@
 package com.coffee.modelParsers.VarToHLVL;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-
-import static org.junit.Assert.fail;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import org.junit.Assert;
 import org.junit.Test;
 import com.coffee.modelParsers.varXmlToHLVLParser.VariamosXMLToHlvlParser;
 import com.github.coffeeframework.utils.ParsingParameters;
@@ -174,7 +166,7 @@ public class NewTestxmlToHLVLParser {
 				"\tr5: implies(cuartoPrincipal,garaje)\n" + 
 				"\tr6: mutex(AnteMinusJardin, cuartoInvitador)\n";
 		
-		assertEquals(output, resultado);
+		Assert.assertEquals(output, resultado);
 		//System.out.println(output);
 	}
 	
@@ -502,7 +494,7 @@ public class NewTestxmlToHLVLParser {
 							"	R7: implies(mstprim, unweighted)\n" + 
 							"	R8: mutex(stronglyc, shortest)";
 		
-		assertEquals(output, resultado);
+		Assert.assertEquals(output, resultado);
 		//System.out.println(output);
 	}
 
