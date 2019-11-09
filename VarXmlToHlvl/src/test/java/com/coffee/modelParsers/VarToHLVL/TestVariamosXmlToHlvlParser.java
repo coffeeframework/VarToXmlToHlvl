@@ -1472,157 +1472,157 @@ public class TestVariamosXmlToHlvlParser {
 	/**
 	 * test included by avillota to test the changes in the HLVL grammar
 	 */
-	@Test
-	public void smallTestStrings() {
-
-		ParsingParameters params = new ParsingParameters();
-		params.setInputPath(COMMON_PATH_INPUT+"smallTest");
-		params.setOutputPath(COMMON_PATH_OUTPUT);
-		params.setTargetName("smallTest");
-		String output="";
-		String input = "<mxGraphModel>\n" + 
-				"  <root>\n" + 
-				"    <mxCell id=\"0\"/>\n" + 
-				"    <mxCell id=\"feature\" parent=\"0\"/>\n" + 
-				"    <root label=\"casa\" type=\"root\" id=\"1\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"420\" y=\"30\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </root>\n" + 
-				"    <bundle label=\"bundle\" type=\"bundle\" bundleType=\"OR\" lowRange=\"1\" highRange=\"1\" id=\"2\">\n" + 
-				"      <mxCell style=\"shape=ellipse\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"330\" y=\"110\" width=\"35\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </bundle>\n" + 
-				"    <general label=\"garaje\" type=\"general\" id=\"3\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"180\" y=\"210\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </general>\n" + 
-				"    <bundle label=\"bundle\" type=\"bundle\" bundleType=\"AND\" lowRange=\"1\" highRange=\"1\" id=\"4\">\n" + 
-				"      <mxCell style=\"shape=ellipse\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"660\" y=\"160\" width=\"35\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </bundle>\n" + 
-				"    <leaf label=\"Ante-Jardin\" type=\"leaf\" selected=\"1\" id=\"5\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"360\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </leaf>\n" + 
-				"    <rel_general_bundle type=\"relation\" id=\"6\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"3\" target=\"2\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_bundle>\n" + 
-				"    <rel_leaf_bundle type=\"relation\" id=\"7\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"5\" target=\"2\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_leaf_bundle>\n" + 
-				"    <leaf label=\"cocina\" type=\"leaf\" selected=\"1\" id=\"8\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"590\" y=\"240\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </leaf>\n" + 
-				"    <rel_leaf_bundle type=\"relation\" id=\"9\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"8\" target=\"4\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_leaf_bundle>\n" + 
-				"    <rel_bundle_root type=\"relation\" id=\"10\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"4\" target=\"1\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_bundle_root>\n" + 
-				"    <rel_bundle_root type=\"relation\" id=\"11\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"2\" target=\"1\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_bundle_root>\n" + 
-				"    <general label=\"bano\" type=\"general\" id=\"12\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"720\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </general>\n" + 
-				"    <rel_general_bundle type=\"relation\" id=\"13\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"12\" target=\"4\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_bundle>\n" + 
-				"    <general label=\"cuartoPrincipal\" type=\"general\" id=\"14\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"160\" y=\"30\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </general>\n" + 
-				"    <rel_general_root type=\"relation\" relType=\"mandatory\" id=\"15\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"14\" target=\"1\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_root>\n" + 
-				"    <general label=\"cuartoInvitador\" type=\"general\" id=\"16\">\n" + 
-				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
-				"        <mxGeometry x=\"660\" y=\"40\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </general>\n" + 
-				"    <rel_general_root type=\"relation\" relType=\"optional\" id=\"17\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"16\" target=\"1\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_root>\n" + 
-				"    <rel_general_general type=\"relation\" relType=\"requires\" id=\"18\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"14\" target=\"3\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_general>\n" + 
-				"    <rel_general_leaf type=\"relation\" relType=\"excludes\" id=\"19\">\n" + 
-				"      <mxCell edge=\"1\" parent=\"feature\" source=\"16\" target=\"5\">\n" + 
-				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </rel_general_leaf>\n" + 
-				"    <mxCell id=\"component\" parent=\"0\" visible=\"0\"/>\n" + 
-				"    <mxCell id=\"binding_feature_component\" parent=\"0\" visible=\"0\"/>\n" + 
-				"    <leaf label=\"Ante-Jardin\" type=\"leaf\" selected=\"1\" id=\"clon5\">\n" + 
-				"      <mxCell style=\"fillColor=#DCDCDC;\" vertex=\"1\" parent=\"binding_feature_component\">\n" + 
-				"        <mxGeometry x=\"360\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </leaf>\n" + 
-				"    <leaf label=\"cocina\" type=\"leaf\" selected=\"1\" id=\"clon8\">\n" + 
-				"      <mxCell style=\"fillColor=#DCDCDC;\" vertex=\"1\" parent=\"binding_feature_component\">\n" + 
-				"        <mxGeometry x=\"590\" y=\"240\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
-				"      </mxCell>\n" + 
-				"    </leaf>\n" + 
-				"  </root>\n" + 
-				"</mxGraphModel>\n" ;
-		
-		varXmlToHlvlParser.setParams(params);
-		try {
-			output= varXmlToHlvlParser.parse(input );
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		String resultado ="model  Auto_generated\n"+
-				"elements: \n" + 
-				"\tboolean casa\n" + 
-				"\tboolean bano\n" + 
-				"\tboolean garaje\n" + 
-				"\tboolean cuartoPrincipal\n" + 
-				"\tboolean AnteMinusJardin\n" + 
-				"\tboolean cuartoInvitador\n" + 
-				"\tboolean cocina\n" + 
-				"relations:\n" + 
-				"\tr0: common(casa)\n" + 
-				"\tr1:group(casa,[garaje, AnteMinusJardin],[1,*])\n" + 
-				"\tr2:group(casa,[cocina, bano],[1,1])\n"+ 
-				"\tr3:decomposition(cuartoPrincipal,[casa],[1,1])\n" + 
-				"\tr4:decomposition(casa,[cuartoInvitador],[0,1])\n" + 
-				"\tr5: implies(cuartoPrincipal,garaje)\n" + 
-				"\tr6: mutex(AnteMinusJardin, cuartoInvitador)\n";
-		
-		assertEquals(output, resultado);
-		//System.out.println(output);
-	}
+//	@Test
+//	public void smallTestStrings() {
+//
+//		ParsingParameters params = new ParsingParameters();
+//		params.setInputPath(COMMON_PATH_INPUT+"smallTest");
+//		params.setOutputPath(COMMON_PATH_OUTPUT);
+//		params.setTargetName("smallTest");
+//		String output="";
+//		String input = "<mxGraphModel>\n" + 
+//				"  <root>\n" + 
+//				"    <mxCell id=\"0\"/>\n" + 
+//				"    <mxCell id=\"feature\" parent=\"0\"/>\n" + 
+//				"    <root label=\"casa\" type=\"root\" id=\"1\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"420\" y=\"30\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </root>\n" + 
+//				"    <bundle label=\"bundle\" type=\"bundle\" bundleType=\"OR\" lowRange=\"1\" highRange=\"1\" id=\"2\">\n" + 
+//				"      <mxCell style=\"shape=ellipse\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"330\" y=\"110\" width=\"35\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </bundle>\n" + 
+//				"    <general label=\"garaje\" type=\"general\" id=\"3\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"180\" y=\"210\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </general>\n" + 
+//				"    <bundle label=\"bundle\" type=\"bundle\" bundleType=\"AND\" lowRange=\"1\" highRange=\"1\" id=\"4\">\n" + 
+//				"      <mxCell style=\"shape=ellipse\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"660\" y=\"160\" width=\"35\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </bundle>\n" + 
+//				"    <leaf label=\"Ante-Jardin\" type=\"leaf\" selected=\"1\" id=\"5\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"360\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </leaf>\n" + 
+//				"    <rel_general_bundle type=\"relation\" id=\"6\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"3\" target=\"2\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_bundle>\n" + 
+//				"    <rel_leaf_bundle type=\"relation\" id=\"7\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"5\" target=\"2\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_leaf_bundle>\n" + 
+//				"    <leaf label=\"cocina\" type=\"leaf\" selected=\"1\" id=\"8\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"590\" y=\"240\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </leaf>\n" + 
+//				"    <rel_leaf_bundle type=\"relation\" id=\"9\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"8\" target=\"4\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_leaf_bundle>\n" + 
+//				"    <rel_bundle_root type=\"relation\" id=\"10\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"4\" target=\"1\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_bundle_root>\n" + 
+//				"    <rel_bundle_root type=\"relation\" id=\"11\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"2\" target=\"1\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_bundle_root>\n" + 
+//				"    <general label=\"bano\" type=\"general\" id=\"12\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"720\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </general>\n" + 
+//				"    <rel_general_bundle type=\"relation\" id=\"13\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"12\" target=\"4\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_bundle>\n" + 
+//				"    <general label=\"cuartoPrincipal\" type=\"general\" id=\"14\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"160\" y=\"30\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </general>\n" + 
+//				"    <rel_general_root type=\"relation\" relType=\"mandatory\" id=\"15\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"14\" target=\"1\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_root>\n" + 
+//				"    <general label=\"cuartoInvitador\" type=\"general\" id=\"16\">\n" + 
+//				"      <mxCell style=\"\" vertex=\"1\" parent=\"feature\">\n" + 
+//				"        <mxGeometry x=\"660\" y=\"40\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </general>\n" + 
+//				"    <rel_general_root type=\"relation\" relType=\"optional\" id=\"17\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"16\" target=\"1\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_root>\n" + 
+//				"    <rel_general_general type=\"relation\" relType=\"requires\" id=\"18\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"14\" target=\"3\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_general>\n" + 
+//				"    <rel_general_leaf type=\"relation\" relType=\"excludes\" id=\"19\">\n" + 
+//				"      <mxCell edge=\"1\" parent=\"feature\" source=\"16\" target=\"5\">\n" + 
+//				"        <mxGeometry relative=\"1\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </rel_general_leaf>\n" + 
+//				"    <mxCell id=\"component\" parent=\"0\" visible=\"0\"/>\n" + 
+//				"    <mxCell id=\"binding_feature_component\" parent=\"0\" visible=\"0\"/>\n" + 
+//				"    <leaf label=\"Ante-Jardin\" type=\"leaf\" selected=\"1\" id=\"clon5\">\n" + 
+//				"      <mxCell style=\"fillColor=#DCDCDC;\" vertex=\"1\" parent=\"binding_feature_component\">\n" + 
+//				"        <mxGeometry x=\"360\" y=\"230\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </leaf>\n" + 
+//				"    <leaf label=\"cocina\" type=\"leaf\" selected=\"1\" id=\"clon8\">\n" + 
+//				"      <mxCell style=\"fillColor=#DCDCDC;\" vertex=\"1\" parent=\"binding_feature_component\">\n" + 
+//				"        <mxGeometry x=\"590\" y=\"240\" width=\"100\" height=\"35\" as=\"geometry\"/>\n" + 
+//				"      </mxCell>\n" + 
+//				"    </leaf>\n" + 
+//				"  </root>\n" + 
+//				"</mxGraphModel>\n" ;
+//		
+//		varXmlToHlvlParser.setParams(params);
+//		try {
+//			output= varXmlToHlvlParser.parse(input);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//
+//		String resultado ="model  Auto_generated\n"+
+//				"elements: \n" + 
+//				"\tboolean casa\n" + 
+//				"\tboolean bano\n" + 
+//				"\tboolean garaje\n" + 
+//				"\tboolean cuartoPrincipal\n" + 
+//				"\tboolean AnteMinusJardin\n" + 
+//				"\tboolean cuartoInvitador\n" + 
+//				"\tboolean cocina\n" + 
+//				"relations:\n" + 
+//				"\tr0: common(casa)\n" + 
+//				"\tr1:group(casa,[garaje, AnteMinusJardin],[1,*])\n" + 
+//				"\tr2:group(casa,[cocina, bano],[1,1])\n"+ 
+//				"\tr3:decomposition(cuartoPrincipal,[casa],[1,1])\n" + 
+//				"\tr4:decomposition(casa,[cuartoInvitador],[0,1])\n" + 
+//				"\tr5: implies(cuartoPrincipal,garaje)\n" + 
+//				"\tr6: mutex(AnteMinusJardin, cuartoInvitador)\n";
+//		
+//		assertEquals(output, resultado);
+//		//System.out.println(output);
+//	}
 	
 	@Test
 	public void GLPTest() {
