@@ -30,7 +30,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/coffeeframework/VarXmlToHlvl.git</connection>
-		<developerConnection>scm:git:ssh://github.com/coffeeframework/VarXmlToHlvl.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:coffeeframework/VarXmlToHlvl.git</developerConnection>
 		<url>https://github.com/coffeeframework/VarXmlToHlvl</url>
 	</scm>
 
