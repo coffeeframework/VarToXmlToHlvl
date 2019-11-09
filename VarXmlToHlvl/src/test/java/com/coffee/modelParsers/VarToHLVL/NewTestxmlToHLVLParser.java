@@ -459,40 +459,46 @@ public class NewTestxmlToHLVLParser {
 		variamosXMLToHlvlParser = new VariamosXMLToHlvlParser(params);
 		try {
 			output= variamosXMLToHlvlParser.parse(input );
+			System.out.println(variamosXMLToHlvlParser.getHlvlCode().toString());
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		String resultado ="model  Auto_generated\n"+
-							"elements:  \n" + 
-							"	boolean GPL \n" + 
-							"	boolean Gtp \n" + 
-							"	boolean directed\n" + 
-							"	boolean undirected\n" + 
-							"	boolean Weight\n" + 
-							"	boolean weighted\n" + 
-							"	boolean unweighted\n" + 
-							"	boolean Search\n" + 
-							"	boolean BFS\n" + 
-							"	boolean DFS\n" + 
-							"	boolean Algorithms\n" + 
-							"	boolean connected\n" + 
-							"	boolean stronglyc\n" + 
-							"	boolean cycle\n" + 
-							"	boolean mstprim\n" + 
-							"	boolean mstkruskal\n" + 
-							"	boolean shortest\n" + 
-							"relations:\n" + 
-							"	R1: common(GPL)\n" + 
-							"	R2: decomposition(GPL,[Weight, Search], [0,1])\n" + 
-							"	R3: decomposition(GPL, [Gtp, Algorithms], [1,1])\n" + 
-							"	R3X: group(Gtp, [directed, undirected], [1,1])\n" + 
-							"	R4: group(Weight, [weighted, unweighted], [1,1])\n" + 
-							"	R5: group(Search, [BFS, DFS], [1,1])\n" + 
-							"	R6: group(Algorithms, [connected, stronglyc, cycle, mstprim, mstkruskal, shortest], [1,*])\n" + 
-							"	R7: implies(mstprim, unweighted)\n" + 
-							"	R8: mutex(stronglyc, shortest)";
+		String resultado ="model  Auto_generated\n" + 
+				"elements: \n" + 
+				"	boolean unweighted\n" + 
+				"	boolean mstprim\n" + 
+				"	boolean mstkruskal\n" + 
+				"	boolean shortest\n" + 
+				"	boolean directed\n" + 
+				"	boolean undirected\n" + 
+				"	boolean GPL\n" + 
+				"	boolean GTP\n" + 
+				"	boolean Weight\n" + 
+				"	boolean Search\n" + 
+				"	boolean Algorithm\n" + 
+				"	boolean DFS\n" + 
+				"	boolean BFS\n" + 
+				"	boolean connected\n" + 
+				"	boolean stronglyc\n" + 
+				"	boolean weighted\n" + 
+				"	boolean cycle\n" + 
+				"relations:\n" + 
+				"	r0:group(GTP,[directed, undirected],[1,1])\n" + 
+				"	r1:group(Weight,[weighted, unweighted],[1,1])\n" + 
+				"	r2:group(Algorithm,[connected, stronglyc, cycle, mstkruskal, mstprim, shortest],[1,*])\n" + 
+				"	r3:group(Search,[DFS, BFS],[1,1])\n" + 
+				"	r4: common(GPL)\n" + 
+				"	r5:decomposition(GPL,[Weight],[0,1])\n" + 
+				"	r6:decomposition(GPL,[Search],[0,1])\n" + 
+				"	r7:decomposition(GTP,[GPL],[1,1])\n" + 
+				"	r8:decomposition(Algorithm,[GPL],[1,1])\n" + 
+				"	r9: mutex(shortest, stronglyc)\n" + 
+				"	r10: implies(mstprim,unweighted)"
+				+ ""
+				+ "";
 		
 		Assert.assertEquals(output, resultado);
 		//System.out.println(output);

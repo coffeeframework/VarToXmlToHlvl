@@ -1,0 +1,87 @@
+model  bigTest2_generated
+elements: 
+	boolean Windows_Server
+	boolean 64_GB
+	boolean Windows_10
+	boolean ATI
+	boolean NVIDIA
+	boolean Marca
+	boolean Tecnologia
+	boolean SO
+	boolean Pantalla
+	boolean Windows
+	boolean 500_GB
+	boolean 1_TB
+	boolean 2_TB
+	boolean 5_TB
+	boolean 10_TB
+	boolean Yosemite
+	boolean OS_X_Server
+	boolean Personal
+	boolean Size
+	boolean Apple
+	boolean Computador
+	boolean 3D
+	boolean 4K
+	boolean Planta_de_Poder
+	boolean Fedora
+	boolean Red_Hat
+	boolean Portatil
+	boolean Mesa
+	boolean Dell
+	boolean Toshiba
+	boolean 14_Pulgadas
+	boolean 17_Pulgadas
+	boolean 24_Pulgadas
+	boolean Linux
+	boolean CPU
+	boolean Procesador
+	boolean Lenovo
+	boolean AMD
+	boolean Apple
+	boolean Intel
+	boolean Clon
+	boolean Memoria
+	boolean Disco
+	boolean Tarjeta_Grafica
+	boolean Tipo
+	boolean 4_GB
+	boolean 8_GB
+	boolean 32_GB
+	boolean Servidor
+	boolean 16_GB
+relations:
+	r0:group(Windows,[Windows_Server, Windows_10],[1,1])
+	r1:group(Disco,[500_GB, 1_TB, 2_TB, 5_TB, 10_TB],[1,1])
+	r2:group(Apple,[Yosemite, OS_X_Server],[1,1])
+	r3:group(Tipo,[Personal, Servidor],[1,1])
+	r4:group(Linux,[Fedora, Red_Hat],[1,1])
+	r5:group(Tecnologia,[3D, 4K],[1,*])
+	r6: common(Computador)
+	r7:group(Servidor,[Portatil, Mesa],[1,1])
+	r8:group(Marca,[Dell, Toshiba, Lenovo, Apple, Clon],[1,1])
+	r9:group(Size,[14_Pulgadas, 17_Pulgadas, 24_Pulgadas],[1,1])
+	r10:group(Procesador,[AMD, Intel],[1,1])
+	r11:group(Memoria,[4_GB, 8_GB, 16_GB, 32_GB, 64_GB],[1,1])
+	r12:group(SO,[Windows, Apple, Linux],[1,1])
+	r13:group(Tarjeta_Grafica,[ATI, NVIDIA],[1,1])
+	r14:decomposition(Computador,[Planta_de_Poder],[0,1])
+	r15:decomposition(Tipo,[Computador],[1,1])
+	r16:decomposition(Marca,[Computador],[1,1])
+	r17:decomposition(SO,[Computador],[1,1])
+	r18:decomposition(Procesador,[CPU],[1,1])
+	r19:decomposition(Memoria,[CPU],[1,1])
+	r20:decomposition(Disco,[CPU],[1,1])
+	r21:decomposition(CPU,[Tarjeta_Grafica],[0,1])
+	r22:decomposition(CPU,[Computador],[1,1])
+	r23:decomposition(Computador,[Pantalla],[0,1])
+	r24:decomposition(Tecnologia,[Pantalla],[1,1])
+	r25:decomposition(Size,[Pantalla],[1,1])
+	r26: implies(Windows_Server,Servidor)
+	r27: implies(Windows_10,Personal)
+	r28: implies(Pantalla,Portatil)
+	r29: implies(Red_Hat,Servidor)
+	r30: implies(OS_X_Server,Servidor)
+	r31: implies(Fedora,Personal)
+	r32: implies(Yosemite,Personal)
+
