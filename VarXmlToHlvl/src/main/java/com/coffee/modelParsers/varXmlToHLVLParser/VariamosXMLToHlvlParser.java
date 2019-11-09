@@ -8,9 +8,7 @@ import com.github.coffeeframework.basickhlvlpackage.GroupType;
 import com.github.coffeeframework.basickhlvlpackage.HlvlBasicFactory;
 import com.github.coffeeframework.basickhlvlpackage.IHlvlBasicFactory;
 import com.github.coffeeframework.basickhlvlpackage.IHlvlParser;
-import com.github.coffeeframework.utils.FileUtils;
-import com.github.coffeeframework.utils.ParsingParameters;
-
+import com.github.coffeeframework.utils.*;
 
 /**
  * This is a class that is responsible for extracting 
@@ -31,46 +29,41 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 
 	/**
 	 * List that contains the dependencies between the elements from a xml file
-	 * @param ArrayList<Dependecy>: ArrayList with Dependecy objects
-	 */
+	*/
 	private ArrayList<Dependency> importantXmlDependecy;
 
 	/**
 	 * Map that contains the elements from a xml. These elements can be: root, general and leaf
-	 * @param HashMap<String, Element>: HashMap with Element objects
 	 */
 	private HashMap<String, Element> xmlElements;
 
 	/**
-	 * @param xmlReader: relationship with the XmlReader class that fulfills the
-	 *        function of loading the XML file
+	 * Relationship with the XmlReader class that fulfills the
+	 * function of loading the XML file
 	 */
 	private XmlReader xmlReader;
 
 	/**
-	 * @param params: relationship with the ParsingParameters class that fulfills
-	 *        the function of save the pahts to load de xml fiel and write de HLVL
-	 *        code file
+	 * Relationship with the ParsingParameters class that fulfills
+	 * the function of save the pahts to load de xml fiel and write de HLVL
+	 * code file
 	 */
 	private ParsingParameters params;
 
 	/**
-	 * @param HlvlCode: relationship with the StringBuilder class that fulfills the
-	 *        function of save the HLVL code
+	 * Relationship with the StringBuilder class that fulfills the
+	 * function of save the HLVL code
 	 */
 	private StringBuilder HlvlCode;
 	/**
-	 * @param converter: relationship with the HlvlBasicFactory class that fulfills
-	 *        the function of creating the HLVL code
+	 * Relationship with the HlvlBasicFactory class that fulfills
+	 * the function of creating the HLVL code
 	 */
 	private IHlvlBasicFactory rules;
 
 	/**
 	 * This method is responsible for creating a VariamosXMLToHlvlParser object and
-	 * inicializate HlvlCode and params attributes.
-	 * 
-	 * @param params: params that contain paths necesary to load xml file
-	 *        and save HLVL file.
+	 * initializedHlvlCode and params attributes.
 	 */
 	public VariamosXMLToHlvlParser(ParsingParameters params) {
 		HlvlCode = new StringBuilder();
@@ -79,8 +72,7 @@ public class VariamosXMLToHlvlParser implements IHlvlParser {
 	
 	/**
 	 * This method is responsible for creating a VariamosXMLToHlvlParser object and
-	 * inicializate the HlvlCode attribute
-	 * 
+	 * Initialized the HlvlCode attribute
 	 */
 	public VariamosXMLToHlvlParser() {
 		HlvlCode = new StringBuilder();

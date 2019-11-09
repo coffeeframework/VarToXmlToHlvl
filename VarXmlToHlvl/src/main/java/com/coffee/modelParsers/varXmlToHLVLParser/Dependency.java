@@ -13,28 +13,28 @@ public class Dependency {
 	/**
 	 * @param String: dependecy's type
 	 */
-	String type;
+	private String type;
 	/**
 	 * @param String: dependecy's relType
 	 */
-	String relType;
+	private String relType;
 	/**
 	 * @param String: dependecy's id
 	 */
-	String id;
+	private String id;
 	/**
 	 * @param String: dependecy's source
 	 */
-	String source;
+	private String source;
 	/**
 	 * @param String: dependecy's target
 	 */
-	String target;
+	private String target;
 
 	/**
-	 * this method return the Dependcyt's type
+	 * this method return the Dependcy's type
 	 * 
-	 * @return String: Dependecy's type
+	 * @return String: Dependency's type
 	 */
 	public String getType() {
 		return type;

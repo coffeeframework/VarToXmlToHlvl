@@ -33,28 +33,23 @@ import com.github.coffeeframework.utils.FileUtils;
 public class XmlReader {
 	
 	/**
-	 * @param ArrayList<Dependecy>: ArrayList with Dependency objects
+	 * ArrayList with Dependency objects
 	 */
 	private ArrayList<Dependency> xmlDependecies;
 	/**
-	 * @param HashMap<String, Element>: HashMap with Element objects
+	 * HashMap with Element objects
 	 */
-
 	private HashMap<String, Element> xmlElements;
 
 	/**
 	 * This method return a list of Dependency objects
-	 * 
-	 * @return ArrayList: ArrayList with Dependency objects
 	 */
 	public ArrayList<Dependency> getImportantXmlDependecy() {
 		return xmlDependecies;
 	}
-
 	/**
 	 * This method change importantXMLDependecies's value for parameter.
-	 * 
-	 * @param importantXmlDependecy: ArrayList with Dependency objects
+	 * @param importantXmlDependecy : ArrayList with dependency objects
 	 */
 	public void setImportantXmlDependecy(ArrayList<Dependency> importantXmlDependecy) {
 		this.xmlDependecies = importantXmlDependecy;
@@ -220,7 +215,7 @@ public class XmlReader {
 	 */
 	private boolean exitsDependecy(String id) {
 		for (int i = 0; i < xmlDependecies.size(); i++) {
-			if (id.equals(xmlDependecies.get(i).id)) {
+			if (id.equals(xmlDependecies.get(i).getId())) {
 				return true;
 			}
 		}
