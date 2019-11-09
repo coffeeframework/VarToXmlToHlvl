@@ -1,0 +1,358 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="feature" parent="0"/>
+    <root label="Smart Home" type="root" id="1">
+      <mxCell style="strokeWidth=3" parent="feature" vertex="1">
+        <mxGeometry x="558" y="10" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </root>
+    <concrete label="Lighting" type="concrete" selected="false" id="2">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="100" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_root type="relation" relType="mandatory" id="3">
+      <mxCell parent="feature" source="2" target="1" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_root>
+    <concrete label="Anti-theft Alarm" type="concrete" selected="false" id="6">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="320" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_root type="relation" relType="optional" id="7">
+      <mxCell parent="feature" source="6" target="1" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_root>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="14">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="95" y="210" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Cellphone" type="concrete" selected="false" id="15">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="16">
+      <mxCell parent="feature" source="15" target="14" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="Control Panel" type="concrete" selected="false" id="18">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="117.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="19">
+      <mxCell parent="feature" source="18" target="14" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="20">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="367.5" y="210" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="HDTV42" type="concrete" selected="false" id="22">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="227.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="PCPlayer" type="concrete" selected="false" id="23">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="337.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="HDTV32" type="concrete" selected="false" id="24">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="447.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="25">
+      <mxCell parent="feature" source="22" target="20" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="26">
+      <mxCell parent="feature" source="23" target="20" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="27">
+      <mxCell parent="feature" source="24" target="20" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="32">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="637.5" y="210" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Digital Media Server" type="concrete" selected="false" id="35">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="667.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="36">
+      <mxCell parent="feature" source="35" target="32" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="Cache" type="concrete" selected="false" id="45">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="600" y="390" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="47">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="520" y="450" width="35" height="40" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Provider A" type="concrete" selected="false" id="49">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="430" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="50">
+      <mxCell parent="feature" source="49" target="47" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="Provider B" type="concrete" selected="false" id="51">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="540" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="52">
+      <mxCell parent="feature" source="51" target="47" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="Ethernet" type="concrete" selected="false" id="54">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="777.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="3G" type="concrete" selected="false" id="55">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="887.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Wifi-b" type="concrete" selected="false" id="56">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="997.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Wifi-n" type="concrete" selected="false" id="57">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="1107.5" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="62">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="960" y="200" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <rel_concrete_bundle type="relation" id="63">
+      <mxCell parent="feature" source="54" target="62" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="64">
+      <mxCell parent="feature" source="55" target="62" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="65">
+      <mxCell parent="feature" source="56" target="62" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="66">
+      <mxCell parent="feature" source="57" target="62" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <abstract label="ControlSystem" type="abstract" id="68">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="210" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_bundle_abstract type="relation" id="69">
+      <mxCell edge="1" parent="feature" source="14" target="68">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_abstract_root type="relation" relType="mandatory" id="70">
+      <mxCell edge="1" parent="feature" source="68" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="MoviePlayers" type="abstract" id="72">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="430" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_bundle_abstract type="relation" id="73">
+      <mxCell edge="1" parent="feature" source="20" target="72">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <abstract label="Contents" type="abstract" id="74">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="607.5" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="optional" id="75">
+      <mxCell edge="1" parent="feature" source="72" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <rel_abstract_root type="relation" relType="optional" id="76">
+      <mxCell edge="1" parent="feature" source="74" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="VideoOnDemand" type="abstract" id="78">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="560" y="280" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_bundle_abstract type="relation" id="79">
+      <mxCell edge="1" parent="feature" source="32" target="74">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_abstract_bundle type="relation" id="80">
+      <mxCell edge="1" parent="feature" source="78" target="32">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_bundle>
+    <rel_concrete_abstract type="relation" relType="optional" id="82">
+      <mxCell edge="1" parent="feature" source="45" target="78">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_abstract>
+    <abstract label="Providers" type="abstract" id="83">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="490" y="390" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="84">
+      <mxCell edge="1" parent="feature" source="83" target="78">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <rel_bundle_abstract type="relation" id="85">
+      <mxCell edge="1" parent="feature" source="47" target="83">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <abstract label="Internet" type="abstract" id="86">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="918" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="optional" id="87">
+      <mxCell edge="1" parent="feature" source="86" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <rel_bundle_abstract type="relation" id="88">
+      <mxCell edge="1" parent="feature" source="62" target="86">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_concrete_concrete type="relation" relType="requires" id="89">
+      <mxCell edge="1" parent="feature" source="6" target="18">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_concrete>
+    <rel_abstract_abstract type="relation" relType="requires" id="90">
+      <mxCell edge="1" parent="feature" source="78" target="86">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <mxCell id="component" parent="0" visible="0"/>
+    <mxCell id="binding_feature_component" parent="0" visible="0"/>
+    <concrete label="Lighting" type="concrete" selected="false" id="clon2">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="100" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Anti-theft Alarm" type="concrete" selected="false" id="clon6">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="340" y="140" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Cellphone" type="concrete" selected="false" id="clon15">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="180" y="270" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Control Panel" type="concrete" selected="false" id="clon18">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="260" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="HDTV42" type="concrete" selected="false" id="clon22">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="370" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="PCPlayer" type="concrete" selected="false" id="clon23">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="470" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="HDTV32" type="concrete" selected="false" id="clon24">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="590" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Digital Media Server" type="concrete" selected="false" id="clon35">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="660" y="270" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Cache" type="concrete" selected="false" id="clon45">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="620" y="370" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Provider A" type="concrete" selected="false" id="clon49">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="480" y="540" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Provider B" type="concrete" selected="false" id="clon51">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="550" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Ethernet" type="concrete" selected="false" id="clon54">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="810" y="270" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="3G" type="concrete" selected="false" id="clon55">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="930" y="270" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Wifi-b" type="concrete" selected="false" id="clon56">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="1060" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Wifi-n" type="concrete" selected="false" id="clon57">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="1170" y="260" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+  </root>
+</mxGraphModel>

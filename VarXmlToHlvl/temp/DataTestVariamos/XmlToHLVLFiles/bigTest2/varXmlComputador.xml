@@ -1,0 +1,838 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="feature" parent="0"/>
+    <root label="Computador" type="root" id="1">
+      <mxCell style="strokeWidth=3" parent="feature" vertex="1">
+        <mxGeometry x="1105.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </root>
+    <concrete label="Planta de Poder" type="concrete" selected="false" id="7">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="1781" y="134" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_root type="relation" relType="optional" id="13">
+      <mxCell parent="feature" source="7" target="1" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_root>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="14">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="153.5" y="180" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Personal" type="concrete" selected="false" id="16">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="170" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="17">
+      <mxCell parent="feature" source="16" target="14" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="20">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="90" y="320" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Portatil" type="concrete" selected="false" id="22">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry y="370" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Mesa" type="concrete" selected="false" id="23">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="110" y="370" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="24">
+      <mxCell parent="feature" source="22" target="20" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="25">
+      <mxCell parent="feature" source="23" target="20" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="26">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="550.5" y="180" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Dell" type="concrete" selected="false" id="28">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="290" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Toshiba" type="concrete" selected="false" id="29">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="400" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Lenovo" type="concrete" selected="false" id="30">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="520" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Apple" type="concrete" selected="false" id="31">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="630" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Clon" type="concrete" selected="false" id="32">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="750" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="33">
+      <mxCell parent="feature" source="28" target="26" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="34">
+      <mxCell parent="feature" source="29" target="26" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="35">
+      <mxCell parent="feature" source="30" target="26" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="36">
+      <mxCell parent="feature" source="31" target="26" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="37">
+      <mxCell parent="feature" source="32" target="26" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="38">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="664.5" y="427.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Windows Server" type="concrete" selected="false" id="45">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="337" y="664.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Windows 10" type="concrete" selected="false" id="46">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="448.5" y="656" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="48">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="427" y="594.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <rel_concrete_bundle type="relation" id="50">
+      <mxCell parent="feature" source="45" target="48" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="51">
+      <mxCell parent="feature" source="46" target="48" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="52">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="677" y="587.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Yosemite" type="concrete" selected="false" id="53">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="577" y="663" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="OS X Server" type="concrete" selected="false" id="54">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="688.5" y="656" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="55">
+      <mxCell parent="feature" source="53" target="52" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="56">
+      <mxCell parent="feature" source="54" target="52" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="58">
+      <mxCell style="shape=ellipse" parent="feature" vertex="1">
+        <mxGeometry x="898" y="588.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="Fedora" type="concrete" selected="false" id="60">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="808.5" y="656" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="61">
+      <mxCell parent="feature" source="60" target="58" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="Red Hat" type="concrete" selected="false" id="62">
+      <mxCell style="" parent="feature" vertex="1">
+        <mxGeometry x="918.5" y="647.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="63">
+      <mxCell parent="feature" source="62" target="58" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="73">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="951.5" y="338" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="AMD" type="concrete" selected="false" id="74">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="931.5" y="406.5" width="33" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Intel" type="concrete" selected="false" id="75">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="969.5" y="406.5" width="32" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="77">
+      <mxCell edge="1" parent="feature" source="74" target="73">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="78">
+      <mxCell edge="1" parent="feature" source="75" target="73">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="79">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="1064.5" y="398" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="4 GB" type="concrete" selected="false" id="80">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="930.5" y="500.5" width="38" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="8 GB" type="concrete" selected="false" id="81">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="985" y="494" width="39" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="32 GB" type="concrete" selected="false" id="82">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1100" y="494" width="38" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="16 GB" type="concrete" selected="false" id="83">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1045.5" y="494" width="38" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="84">
+      <mxCell edge="1" parent="feature" source="80" target="79">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="85">
+      <mxCell edge="1" parent="feature" source="81" target="79">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="86">
+      <mxCell edge="1" parent="feature" source="83" target="79">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="87">
+      <mxCell edge="1" parent="feature" source="82" target="79">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <concrete label="64 GB" type="concrete" selected="false" id="89">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1154.5" y="494" width="46" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="90">
+      <mxCell edge="1" parent="feature" source="89" target="79">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="91">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="1327" y="394" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="500 GB" type="concrete" selected="false" id="92">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1210.5" y="495" width="55" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="1 TB" type="concrete" selected="false" id="93">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1276.5" y="496" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="2 TB" type="concrete" selected="false" id="94">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1319" y="496" width="41" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="5 TB" type="concrete" selected="false" id="95">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1377" y="494" width="36" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="10 TB" type="concrete" selected="false" id="96">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1426" y="494" width="40" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="97">
+      <mxCell edge="1" parent="feature" source="92" target="91">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="98">
+      <mxCell edge="1" parent="feature" source="93" target="91">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="99">
+      <mxCell edge="1" parent="feature" source="94" target="91">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="100">
+      <mxCell edge="1" parent="feature" source="95" target="91">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="101">
+      <mxCell edge="1" parent="feature" source="96" target="91">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="105">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="1514.5" y="397.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <abstract label="Tipo" type="abstract" id="106">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="123.5" y="103" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="mandatory" id="108">
+      <mxCell edge="1" parent="feature" source="106" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="Servidor" type="abstract" id="109">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="43.5" y="243" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_bundle type="relation" id="110">
+      <mxCell edge="1" parent="feature" source="109" target="14">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_bundle>
+    <abstract label="Marca" type="abstract" id="112">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="513.5" y="100" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="mandatory" id="113">
+      <mxCell edge="1" parent="feature" source="112" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="SO" type="abstract" id="115">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="756" y="330" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="mandatory" id="117">
+      <mxCell edge="1" parent="feature" source="115" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="Windows" type="abstract" id="118">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="491" y="508.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_bundle type="relation" id="119">
+      <mxCell edge="1" parent="feature" source="118" target="38">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_bundle>
+    <abstract label="Apple" type="abstract" id="121">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="641" y="512" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_bundle type="relation" id="122">
+      <mxCell edge="1" parent="feature" source="121" target="38">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_bundle>
+    <rel_bundle_abstract type="relation" id="124">
+      <mxCell edge="1" parent="feature" source="38" target="115">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="125">
+      <mxCell edge="1" parent="feature" source="26" target="112">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="126">
+      <mxCell edge="1" parent="feature" source="14" target="106">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="127">
+      <mxCell edge="1" parent="feature" source="20" target="109">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="128">
+      <mxCell edge="1" parent="feature" source="48" target="118">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="129">
+      <mxCell edge="1" parent="feature" source="52" target="121">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <abstract label="Linux" type="abstract" id="130">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="771" y="518.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_bundle type="relation" id="131">
+      <mxCell edge="1" parent="feature" source="130" target="38">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_bundle>
+    <rel_bundle_abstract type="relation" id="132">
+      <mxCell edge="1" parent="feature" source="58" target="130">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <abstract label="CPU" type="abstract" id="133">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1115" y="157.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <abstract label="Procesador" type="abstract" id="139">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="925" y="277.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="140">
+      <mxCell edge="1" parent="feature" source="139" target="133">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <abstract label="Memoria" type="abstract" id="141">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1051.5" y="287.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_bundle_abstract type="relation" id="142">
+      <mxCell edge="1" parent="feature" source="73" target="139">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_bundle_abstract type="relation" id="143">
+      <mxCell edge="1" parent="feature" source="79" target="141">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="144">
+      <mxCell edge="1" parent="feature" source="141" target="133">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <abstract label="Disco" type="abstract" id="145">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1181.5" y="294.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="146">
+      <mxCell edge="1" parent="feature" source="145" target="133">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <rel_bundle_abstract type="relation" id="147">
+      <mxCell edge="1" parent="feature" source="91" target="145">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <abstract label="Tarjeta Grafica" type="abstract" id="148">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1301.5" y="284.5" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_bundle_abstract type="relation" id="149">
+      <mxCell edge="1" parent="feature" source="105" target="148">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_abstract_abstract type="relation" relType="optional" id="150">
+      <mxCell edge="1" parent="feature" source="148" target="133">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <concrete label="ATI" type="concrete" selected="false" id="151">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1482.5" y="501" width="30" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="NVIDIA" type="concrete" selected="false" id="152">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1535" y="484" width="50" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="153">
+      <mxCell edge="1" parent="feature" source="151" target="105">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="154">
+      <mxCell edge="1" parent="feature" source="152" target="105">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_abstract_root type="relation" relType="mandatory" id="157">
+      <mxCell edge="1" parent="feature" source="133" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <abstract label="Tecnologia" type="abstract" id="158">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1586" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <abstract label="Pantalla" type="abstract" id="159">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1551" y="134" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_root type="relation" relType="optional" id="160">
+      <mxCell edge="1" parent="feature" source="159" target="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_root>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="161">
+      <mxCell edge="1" parent="feature" source="158" target="159">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <abstract label="Size" type="abstract" id="162">
+      <mxCell style="strokeWidth=2" vertex="1" parent="feature">
+        <mxGeometry x="1764" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </abstract>
+    <rel_abstract_abstract type="relation" relType="mandatory" id="163">
+      <mxCell edge="1" parent="feature" source="162" target="159">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_abstract>
+    <bundle label="bundle" type="bundle" bundleType="OR" lowRange="1" highRange="1" id="164">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="1608.5" y="318.5" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <rel_bundle_abstract type="relation" id="165">
+      <mxCell edge="1" parent="feature" source="164" target="158">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <concrete label="3D" type="concrete" selected="false" id="166">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1578.5" y="398.5" width="31" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="4K" type="concrete" selected="false" id="167">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1628.5" y="388.5" width="28" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="168">
+      <mxCell edge="1" parent="feature" source="166" target="164">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="169">
+      <mxCell edge="1" parent="feature" source="167" target="164">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <bundle label="bundle" type="bundle" bundleType="XOR" lowRange="1" highRange="1" id="170">
+      <mxCell style="shape=ellipse" vertex="1" parent="feature">
+        <mxGeometry x="1803" y="306" width="35" height="35" as="geometry"/>
+      </mxCell>
+    </bundle>
+    <concrete label="14 Pulgadas" type="concrete" selected="false" id="171">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1680" y="392" width="84" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="17 Pulgadas" type="concrete" selected="false" id="172">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1797" y="388" width="78" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="24 Pulgadas" type="concrete" selected="false" id="173">
+      <mxCell style="" vertex="1" parent="feature">
+        <mxGeometry x="1897" y="388" width="81" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <rel_concrete_bundle type="relation" id="174">
+      <mxCell edge="1" parent="feature" source="171" target="170">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="175">
+      <mxCell edge="1" parent="feature" source="172" target="170">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_concrete_bundle type="relation" id="176">
+      <mxCell edge="1" parent="feature" source="173" target="170">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_bundle>
+    <rel_bundle_abstract type="relation" id="177">
+      <mxCell edge="1" parent="feature" source="170" target="162">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_bundle_abstract>
+    <rel_concrete_abstract type="relation" relType="requires" id="181">
+      <mxCell edge="1" parent="feature" source="45" target="109">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_abstract>
+    <rel_concrete_concrete type="relation" relType="requires" id="182">
+      <mxCell edge="1" parent="feature" source="46" target="16">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_concrete>
+    <rel_abstract_concrete type="relation" relType="requires" id="183">
+      <mxCell edge="1" parent="feature" source="159" target="22">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_abstract_concrete>
+    <rel_concrete_abstract type="relation" relType="requires" id="184">
+      <mxCell edge="1" parent="feature" source="62" target="109">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_abstract>
+    <rel_concrete_abstract type="relation" relType="requires" id="185">
+      <mxCell edge="1" parent="feature" source="54" target="109">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_abstract>
+    <rel_concrete_concrete type="relation" relType="requires" id="186">
+      <mxCell edge="1" parent="feature" source="60" target="16">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_concrete>
+    <rel_concrete_concrete type="relation" relType="requires" id="187">
+      <mxCell edge="1" parent="feature" source="53" target="16">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </rel_concrete_concrete>
+    <mxCell id="component" parent="0" visible="0"/>
+    <mxCell id="binding_feature_component" parent="0" visible="0"/>
+    <concrete label="Planta de Poder" type="concrete" selected="false" id="clon7">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="560" y="100" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Personal" type="concrete" selected="false" id="clon16">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="30" y="230" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Portatil" type="concrete" selected="false" id="clon22">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="80" y="390" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Mesa" type="concrete" selected="false" id="clon23">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="220" y="380" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Dell" type="concrete" selected="false" id="clon28">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="290" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Toshiba" type="concrete" selected="false" id="clon29">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="400" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Lenovo" type="concrete" selected="false" id="clon30">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="530" y="250" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Apple" type="concrete" selected="false" id="clon31">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="630" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Clon" type="concrete" selected="false" id="clon32">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="750" y="240" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Windows Server" type="concrete" selected="false" id="clon45">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="660" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Windows 10" type="concrete" selected="false" id="clon46">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="770" y="490" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Yosemite" type="concrete" selected="false" id="clon53">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="830" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="OS X Server" type="concrete" selected="false" id="clon54">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="960" y="530" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Fedora" type="concrete" selected="false" id="clon60">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="1100" y="530" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Red Hat" type="concrete" selected="false" id="clon62">
+      <mxCell style="fillColor=#DCDCDC;" parent="binding_feature_component" vertex="1">
+        <mxGeometry x="1230" y="520" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="AMD" type="concrete" selected="false" id="clon74">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1520" y="360" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="Intel" type="concrete" selected="false" id="clon75">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1640" y="350" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="4 GB" type="concrete" selected="false" id="clon80">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1670" y="360" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="8 GB" type="concrete" selected="false" id="clon81">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1790" y="330" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="32 GB" type="concrete" selected="false" id="clon82">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1900" y="350" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="16 GB" type="concrete" selected="false" id="clon83">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1900" y="340" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="64 GB" type="concrete" selected="false" id="clon89">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1800" y="500" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="500 GB" type="concrete" selected="false" id="clon92">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1760" y="350" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="1 TB" type="concrete" selected="false" id="clon93">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1880" y="320" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="2 TB" type="concrete" selected="false" id="clon94">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1900" y="370" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="5 TB" type="concrete" selected="false" id="clon95">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1820" y="380" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="10 TB" type="concrete" selected="false" id="clon96">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1710" y="500" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="ATI" type="concrete" selected="false" id="clon151">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1630" y="420" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="NVIDIA" type="concrete" selected="false" id="clon152">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1680" y="420" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="3D" type="concrete" selected="false" id="clon166">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1680" y="310" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="4K" type="concrete" selected="false" id="clon167">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1800" y="300" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="14 Pulgadas" type="concrete" selected="false" id="clon171">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1440" y="630" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="17 Pulgadas" type="concrete" selected="false" id="clon172">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1580" y="600" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+    <concrete label="24 Pulgadas" type="concrete" selected="false" id="clon173">
+      <mxCell style="fillColor=#DCDCDC;" vertex="1" parent="binding_feature_component">
+        <mxGeometry x="1730" y="600" width="100" height="35" as="geometry"/>
+      </mxCell>
+    </concrete>
+  </root>
+</mxGraphModel>
