@@ -16,6 +16,23 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.github.coffeeframework</groupId>
+			<artifactId>atthlvlpackage</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.coffeeframework</groupId>
+			<artifactId>expressionhlvlpackage</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.coffeeframework</groupId>
+			<artifactId>utils</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -23,6 +40,5 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 </project>
